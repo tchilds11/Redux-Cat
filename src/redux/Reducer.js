@@ -1,21 +1,18 @@
-import { ACTION_EAT, ACTION_NAP, ACTION_PLAY } from './actionTypes';
+import { ACTION_SET_NAME, ACTION_SET_ACTIVITY } from './actionTypes';
 
 export const CatReducer = (state, action) => {
-    switch(action.type) {
-        case ACTION_EAT:
+    switch (action.type) {
+        case ACTION_SET_NAME:
             return {
-                activity: 'eating'
-            }
-
-        case ACTION_NAP:
+                ...state,
+                name: action.payload.name,
+            };
+        case ACTION_SET_ACTIVITY:
             return {
-                activity: 'napping'
-            }
-        case ACTION_PLAY:
-            return {
-                activity: 'playing'
-            }
-            default:
-                return state
+                ...state,
+                activity: action.payload.activity,
+            };
+        default:
+            return state;
     }
 };

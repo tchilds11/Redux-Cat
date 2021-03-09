@@ -1,19 +1,20 @@
-import { ACTION_NAP, ACTION_EAT, ACTION_PLAY } from './actionTypes';
+import { ACTION_SET_NAME, ACTION_SET_ACTIVITY } from './actionTypes';
 
-export const actionNap = () => {
+export const setName = (name) => {
     return {
-        type: ACTION_NAP
+        type: ACTION_SET_NAME,
+        payload: {
+            name
+        }
     }
 }
 
-export const actionEat = () => {
+export const setActivity = (activity) => {
     return {
-        type: ACTION_EAT
+        type: ACTION_SET_ACTIVITY,
+        payload: {
+            activity
+        }
     }
 }
 
-export const actionPlay = () => {
-    return {
-        type: ACTION_PLAY
-    }
-}

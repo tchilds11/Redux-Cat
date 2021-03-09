@@ -1,15 +1,17 @@
 import Output from '../containers/OutputContainer';
-import Eat from '../containers/EatingContainer';
-import Play from '../containers/PlayingContainer';
-import Nap from '../containers/NappingContainer';
+import EatButton from './Eat';
+import PlayButton from './Play';
+import NapButton from './Nap';
+import ChangeName from './ChangeName';
 
 const CatReducer = () => (
     <>
         <h1>Cat App</h1>
+            <ChangeName />
             <Output />
-            <Eat />
-            <Nap />
-            <Play />
+            <EatButton />
+            <NapButton />
+            <PlayButton />
     </>
 );
 
